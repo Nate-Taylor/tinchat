@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-C4-M3D">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="339"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user" translatesAutoresizingMaskIntoConstraints="NO" id="W9z-bL-jo5">
                                                 <rect key="frame" x="16" y="16" width="288" height="288"/>
@@ -69,7 +69,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TE-33-ren">
-                                        <rect key="frame" x="0.0" y="339" width="320" height="165"/>
+                                        <rect key="frame" x="0.0" y="312" width="320" height="176"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXN-7x-Rs8">
                                                 <rect key="frame" x="16" y="8" width="288" height="40"/>
@@ -106,26 +106,39 @@
                                             <constraint firstAttribute="trailing" secondItem="gYv-PZ-Jli" secondAttribute="trailing" constant="16" id="wTv-fQ-bWX"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0u3-uZ-il1">
-                                        <rect key="frame" x="0.0" y="504" width="320" height="44"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwv-pG-9Zb">
+                                        <rect key="frame" x="0.0" y="488" width="320" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0u3-uZ-il1">
+                                                <rect key="frame" x="10" y="5" width="300" height="45"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Редактировать">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name=".SFNSText"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="editAction:" destination="nOR-PO-Lan" eventType="touchUpInside" id="l8W-8E-Agr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="9Nq-Je-LyX"/>
+                                            <constraint firstItem="0u3-uZ-il1" firstAttribute="top" secondItem="Wwv-pG-9Zb" secondAttribute="top" constant="5" id="7YE-rs-bxr"/>
+                                            <constraint firstItem="0u3-uZ-il1" firstAttribute="leading" secondItem="Wwv-pG-9Zb" secondAttribute="leading" constant="10" id="PBn-xe-kvk"/>
+                                            <constraint firstAttribute="bottom" secondItem="0u3-uZ-il1" secondAttribute="bottom" constant="10" id="TPU-7z-EP0"/>
+                                            <constraint firstAttribute="trailing" secondItem="0u3-uZ-il1" secondAttribute="trailing" constant="10" id="Thp-bS-wl3"/>
+                                            <constraint firstAttribute="trailing" secondItem="0u3-uZ-il1" secondAttribute="trailing" constant="10" id="gfV-C0-GP1"/>
+                                            <constraint firstItem="0u3-uZ-il1" firstAttribute="leading" secondItem="Wwv-pG-9Zb" secondAttribute="leading" constant="10" id="mM9-MC-iqz"/>
+                                            <constraint firstAttribute="height" constant="60" id="sQm-nJ-UUq"/>
+                                            <constraint firstAttribute="bottom" secondItem="0u3-uZ-il1" secondAttribute="bottom" constant="10" id="t9K-gZ-HQf"/>
                                         </constraints>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Редактировать">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="17" name=".SFNSText"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="editAction:" destination="nOR-PO-Lan" eventType="touchUpInside" id="l8W-8E-Agr"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>

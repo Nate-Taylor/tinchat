@@ -28,9 +28,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     required init?(coder aDecoder: NSCoder) {
+ 
         fatalError("init(coder:) has not been implemented")
     }*/
- 
+    func printButtonFrame(_ arg: String) {
+        print("Frame of edit button in \(arg):\n\(editButton.frame)")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +50,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         placeholder.layer.cornerRadius = choiceIconBackground.layer.cornerRadius
         placeholder.clipsToBounds = true
         
-        editButton.layer.cornerRadius = 15
-        editButton.layer.borderWidth = 2
-        
-       /* choiceIcon.layer.cornerRadius = choiceIcon.frame.size.width / 2
-        choiceIcon.clipsToBounds = true
-        placeholder.layer.cornerRadius = choiceIcon.layer.cornerRadius
-        placeholder.clipsToBounds = true */
+        editButton.layer.cornerRadius = 13
+        editButton.layer.borderWidth = 1
 
         // Do any additional setup after loading the view.
-        print("Frame of edit button in \(#function):\n\(editButton.frame)")
+        printButtonFrame(#function)
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +64,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("Frame of edit button in \(#function):\n\(editButton.frame)")
+        printButtonFrame(#function)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        printButtonFrame(#function)
+        /*
+     Здесь размер меняется, потому как view появилась и изменилась соответствующим образом, чтобы
+     поместиться на экране. Так как в раскадровке view была "заточена" на iphone 5SE, а появилась
+     на экране iphone 8 plus, frame увеличился.
+     */
     }
 
     @IBAction func editAction(_ sender: Any) {
@@ -68,15 +83,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             ///
             return
         }
- 
- 
-        let button= (sender as? UIButton) ?? UIButton() //если кнопки нет, создай новую
          
-         или через if let button...
-         */
-        
- //       button
- //       button!.titleLabel.text="11"
+         button!.titleLabel.text="11"
+        */
     }
     
     
@@ -91,6 +100,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     */
     
     @IBAction func selectImageFromLibrary(_ sender: UITapGestureRecognizer) {
+        print("select profile image")
+        
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         
