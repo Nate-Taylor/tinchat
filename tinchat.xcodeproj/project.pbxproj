@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		4331DD5A1F777BC100647C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331DD591F777BC100647C8E /* AppDelegate.swift */; };
 		4331DD5C1F777BC100647C8E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331DD5B1F777BC100647C8E /* ProfileViewController.swift */; };
-		4331DD5F1F777BC100647C8E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4331DD5D1F777BC100647C8E /* Profile.storyboard */; };
+		4331DD5F1F777BC100647C8E /* Profile0.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4331DD5D1F777BC100647C8E /* Profile0.storyboard */; };
 		4331DD611F777BC100647C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4331DD601F777BC100647C8E /* Assets.xcassets */; };
 		4331DD641F777BC100647C8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4331DD621F777BC100647C8E /* LaunchScreen.storyboard */; };
 		4331DD6C1F777CDD00647C8E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4331DD6B1F777CDD00647C8E /* Media.xcassets */; };
+		43D0CC9A1F7C08690090D269 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D0CC991F7C08690090D269 /* Profile.storyboard */; };
+		43D0CC9C1F7C11330090D269 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D0CC9B1F7C11330090D269 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4331DD561F777BC100647C8E /* tinchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4331DD591F777BC100647C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4331DD5B1F777BC100647C8E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		4331DD5E1F777BC100647C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		4331DD5E1F777BC100647C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile0.storyboard; sourceTree = "<group>"; };
 		4331DD601F777BC100647C8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4331DD631F777BC100647C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4331DD651F777BC100647C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4331DD6B1F777CDD00647C8E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		43D0CC991F7C08690090D269 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		43D0CC9B1F7C11330090D269 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				4331DD591F777BC100647C8E /* AppDelegate.swift */,
 				4331DD5B1F777BC100647C8E /* ProfileViewController.swift */,
-				4331DD5D1F777BC100647C8E /* Profile.storyboard */,
+				4331DD5D1F777BC100647C8E /* Profile0.storyboard */,
 				4331DD601F777BC100647C8E /* Assets.xcassets */,
 				4331DD621F777BC100647C8E /* LaunchScreen.storyboard */,
-				4331DD651F777BC100647C8E /* Info.plist */,
 				4331DD6B1F777CDD00647C8E /* Media.xcassets */,
+				43D0CC991F7C08690090D269 /* Profile.storyboard */,
+				43D0CC9B1F7C11330090D269 /* ViewController.swift */,
+				4331DD651F777BC100647C8E /* Info.plist */,
 			);
 			path = tinchat;
 			sourceTree = "<group>";
@@ -94,11 +100,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = nate_taylor;
 				TargetAttributes = {
 					4331DD551F777BC100647C8E = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -129,7 +136,8 @@
 				4331DD641F777BC100647C8E /* LaunchScreen.storyboard in Resources */,
 				4331DD611F777BC100647C8E /* Assets.xcassets in Resources */,
 				4331DD6C1F777CDD00647C8E /* Media.xcassets in Resources */,
-				4331DD5F1F777BC100647C8E /* Profile.storyboard in Resources */,
+				4331DD5F1F777BC100647C8E /* Profile0.storyboard in Resources */,
+				43D0CC9A1F7C08690090D269 /* Profile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D0CC9C1F7C11330090D269 /* ViewController.swift in Sources */,
 				4331DD5C1F777BC100647C8E /* ProfileViewController.swift in Sources */,
 				4331DD5A1F777BC100647C8E /* AppDelegate.swift in Sources */,
 			);
@@ -148,12 +157,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4331DD5D1F777BC100647C8E /* Profile.storyboard */ = {
+		4331DD5D1F777BC100647C8E /* Profile0.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4331DD5E1F777BC100647C8E /* Base */,
 			);
-			name = Profile.storyboard;
+			name = Profile0.storyboard;
 			sourceTree = "<group>";
 		};
 		4331DD621F777BC100647C8E /* LaunchScreen.storyboard */ = {
@@ -177,7 +186,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -185,7 +196,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -214,6 +229,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -227,7 +244,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -235,7 +254,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -256,6 +279,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -268,7 +293,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nt-products.tinchat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -280,7 +306,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nt-products.tinchat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
