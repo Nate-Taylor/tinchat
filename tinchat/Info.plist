@@ -42,8 +42,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Choose &apos;OK&apos; to add your profile photo from library.</string>
+	<string>Press OK to add your profile photo from library.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Choose &apos;OK&apos; to take your profile photo with camera.</string>
+	<string>Press OK to take your profile photo with camera.</string>
 </dict>
 </plist>

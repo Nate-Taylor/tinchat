@@ -162,7 +162,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xi9-s7-GCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="0Rz-Ro-tdB">
                     <connections>
-                        <action selector="selectImageFromLibrary:" destination="nOR-PO-Lan" id="HHd-Sq-zoL"/>
+                        <action selector="selectImage:" destination="nOR-PO-Lan" id="yi1-HV-QBt"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

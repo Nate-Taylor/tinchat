@@ -31,12 +31,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
  
         fatalError("init(coder:) has not been implemented")
     }*/
+    
+    
     func printButtonFrame(_ arg: String) {
         print("Frame of edit button in \(arg):\n\(editButton.frame)")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        //вызов printButtonFrame(..) будет ошибкой, т.к. Outlet-ы еще не подключены
     }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -45,6 +48,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        choiceIconBackground.layer.borderWidth = 1
+        choiceIconBackground.layer.borderColor = UIColor.white.cgColor
         choiceIconBackground.layer.cornerRadius = choiceIconBackground.frame.size.width / 2
         choiceIconBackground.clipsToBounds = true
         placeholder.layer.cornerRadius = choiceIconBackground.layer.cornerRadius
@@ -99,13 +104,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     */
     
-    @IBAction func selectImageFromLibrary(_ sender: UITapGestureRecognizer) {
+    @IBAction func selectImage(_ sender: UITapGestureRecognizer) {
         print("select profile image")
         
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         
-        let actionSheet = UIAlertController(title: "Photo source", message: nil, preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "photo source", message: nil, preferredStyle: .actionSheet)
         
         // camera permission
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action: UIAlertAction) in
@@ -138,7 +143,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             case .denied, .restricted:
                 print("denied")
             }
-            
         }))
         
         // Photo Library permission and access
