@@ -10,7 +10,7 @@ import UIKit
 import Photos
 import AVFoundation
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
    
     @IBOutlet weak var placeholder: UIImageView!
@@ -31,7 +31,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
  
         fatalError("init(coder:) has not been implemented")
     }*/
-    
     
     func printButtonFrame(_ arg: String) {
         print("Frame of edit button in \(arg):\n\(editButton.frame)")
