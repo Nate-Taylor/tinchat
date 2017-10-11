@@ -54,9 +54,18 @@ class ConversationsListViewController: UIViewController, UITableViewDataSource, 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
         if segue.identifier == "toConversation", let destination = segue.destination as? ConversationViewController{
+            
             if let cell = sender as? ConversationListCell {
                 destination.navigationItem.title = cell.name.text
+                
+                /*
+                let backButton = UIBarButtonItem()
+                backButton.title = "Back"
+                destination.navigationItem.setLeftBarButton(backButton, animated: true)
+                */
             }
         }
     }
@@ -86,8 +95,10 @@ class ConversationsListViewController: UIViewController, UITableViewDataSource, 
         super.viewDidLoad()
         
         createCellContent()
+        
         self.conversationListTableView.estimatedRowHeight = 80
         self.conversationListTableView.rowHeight = UITableViewAutomaticDimension
+        
         // Do any additional setup after loading the view.
     }
     
