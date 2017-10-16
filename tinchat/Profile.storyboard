@@ -262,39 +262,27 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TE-33-ren">
                                         <rect key="frame" x="0.0" y="312" width="320" height="132"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXN-7x-Rs8">
-                                                <rect key="frame" x="16" y="8" width="288" height="40"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Iron man">
-                                                        <attributes>
-                                                            <font key="NSFont" size="36" name="TimesNewRomanPS-BoldMT"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYv-PZ-Jli">
-                                                <rect key="frame" x="16" y="55.5" width="288" height="75.5"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="* genius  * billionaire  * playboy  * philanthropist">
-                                                        <attributes>
-                                                            <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCC-fo-DjS">
+                                                <rect key="frame" x="16" y="19" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JHf-So-P8D">
+                                                <rect key="frame" x="16" y="71.5" width="288" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="gYv-PZ-Jli" firstAttribute="top" secondItem="lXN-7x-Rs8" secondAttribute="bottom" constant="8" id="016-h3-vtE"/>
-                                            <constraint firstAttribute="trailing" secondItem="lXN-7x-Rs8" secondAttribute="trailing" constant="16" id="5xQ-uq-LOR"/>
-                                            <constraint firstItem="gYv-PZ-Jli" firstAttribute="leading" secondItem="4TE-33-ren" secondAttribute="leading" constant="16" id="634-lf-set"/>
-                                            <constraint firstItem="lXN-7x-Rs8" firstAttribute="top" secondItem="4TE-33-ren" secondAttribute="top" constant="8" id="9vv-NT-N96"/>
-                                            <constraint firstItem="lXN-7x-Rs8" firstAttribute="leading" secondItem="4TE-33-ren" secondAttribute="leading" constant="16" id="NZR-US-8Nf"/>
-                                            <constraint firstAttribute="trailing" secondItem="gYv-PZ-Jli" secondAttribute="trailing" constant="16" id="wTv-fQ-bWX"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZCC-fo-DjS" secondAttribute="trailing" constant="16" id="HWc-Iq-S9i"/>
+                                            <constraint firstItem="ZCC-fo-DjS" firstAttribute="top" secondItem="4TE-33-ren" secondAttribute="top" constant="19" id="Oye-cm-cn3"/>
+                                            <constraint firstItem="JHf-So-P8D" firstAttribute="leading" secondItem="4TE-33-ren" secondAttribute="leading" constant="16" id="Qqg-I5-9RR"/>
+                                            <constraint firstAttribute="trailing" secondItem="JHf-So-P8D" secondAttribute="trailing" constant="16" id="T7t-IO-cug"/>
+                                            <constraint firstItem="JHf-So-P8D" firstAttribute="top" secondItem="ZCC-fo-DjS" secondAttribute="bottom" constant="22.5" id="UUq-iR-LiF"/>
+                                            <constraint firstItem="ZCC-fo-DjS" firstAttribute="leading" secondItem="4TE-33-ren" secondAttribute="leading" constant="16" id="e2l-G4-6MG"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwv-pG-9Zb">
@@ -324,13 +312,18 @@
                                             <constraint firstItem="0u3-uZ-il1" firstAttribute="leading" secondItem="Wwv-pG-9Zb" secondAttribute="leading" constant="10" id="PBn-xe-kvk"/>
                                             <constraint firstAttribute="bottom" secondItem="0u3-uZ-il1" secondAttribute="bottom" constant="10" id="TPU-7z-EP0"/>
                                             <constraint firstAttribute="trailing" secondItem="0u3-uZ-il1" secondAttribute="trailing" constant="10" id="Thp-bS-wl3"/>
-                                            <constraint firstAttribute="trailing" secondItem="0u3-uZ-il1" secondAttribute="trailing" constant="10" id="gfV-C0-GP1"/>
-                                            <constraint firstItem="0u3-uZ-il1" firstAttribute="leading" secondItem="Wwv-pG-9Zb" secondAttribute="leading" constant="10" id="mM9-MC-iqz"/>
                                             <constraint firstAttribute="height" constant="60" id="sQm-nJ-UUq"/>
-                                            <constraint firstAttribute="bottom" secondItem="0u3-uZ-il1" secondAttribute="bottom" constant="10" id="t9K-gZ-HQf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="0YF-C4-M3D" firstAttribute="top" secondItem="ejF-3i-zbT" secondAttribute="top" id="4uL-sc-nc4"/>
+                                    <constraint firstAttribute="trailing" secondItem="0YF-C4-M3D" secondAttribute="trailing" id="5g5-5i-qVC"/>
+                                    <constraint firstAttribute="trailing" secondItem="4TE-33-ren" secondAttribute="trailing" id="FqU-A6-1tR"/>
+                                    <constraint firstItem="4TE-33-ren" firstAttribute="leading" secondItem="ejF-3i-zbT" secondAttribute="leading" id="bsx-gD-vWF"/>
+                                    <constraint firstItem="0YF-C4-M3D" firstAttribute="leading" secondItem="ejF-3i-zbT" secondAttribute="leading" id="j7e-DQ-Rvy"/>
+                                    <constraint firstItem="4TE-33-ren" firstAttribute="top" secondItem="0YF-C4-M3D" secondAttribute="bottom" id="m1j-gk-h7l"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -353,8 +346,12 @@
                         <outlet property="choiceIcon" destination="K76-pO-HpO" id="Spd-tB-wik"/>
                         <outlet property="choiceIconBackground" destination="eFg-jK-59w" id="3wM-uL-po6"/>
                         <outlet property="editButton" destination="0u3-uZ-il1" id="09j-qd-TdM"/>
-                        <outlet property="nameLabel" destination="lXN-7x-Rs8" id="P7W-4e-hr9"/>
                         <outlet property="placeholder" destination="W9z-bL-jo5" id="Nta-rT-i9o"/>
+                        <outlet property="profileStackView" destination="ejF-3i-zbT" id="jXo-oX-HNl"/>
+                        <outlet property="textFieldAboutMe" destination="JHf-So-P8D" id="Mc1-k9-Qvz"/>
+                        <outlet property="textFieldName" destination="ZCC-fo-DjS" id="02t-Fl-TFB"/>
+                        <outlet property="viewForEditButton" destination="Wwv-pG-9Zb" id="2SW-jh-DJc"/>
+                        <outlet property="viewForTextFields" destination="4TE-33-ren" id="Rtw-L5-7Vd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xi9-s7-GCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -365,7 +362,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1911" y="-37"/>
+            <point key="canvasLocation" x="1910.625" y="-38.028169014084504"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a5z-th-3ec">

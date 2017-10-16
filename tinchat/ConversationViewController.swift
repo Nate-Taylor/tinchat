@@ -46,6 +46,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         createMessageCellContent()
         self.conversationTableView.estimatedRowHeight = 80
         self.conversationTableView.rowHeight = UITableViewAutomaticDimension
+        
         // Do any additional setup after loading the view.
     }
 

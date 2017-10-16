@@ -10,7 +10,7 @@ import UIKit
 import Photos
 import AVFoundation
 
-class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
    
     @IBOutlet weak var placeholder: UIImageView!
@@ -19,7 +19,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var editButton: UIButton!
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var profileStackView: UIStackView!
+    @IBOutlet weak var viewForEditButton: UIView!
+    @IBOutlet weak var viewForTextFields: UIView!
+    @IBOutlet weak var textFieldName: UITextField!
+    @IBOutlet weak var textFieldAboutMe: UITextField!
+    var activeTextField: UITextField!
     
     /*
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -36,16 +41,18 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         print("Frame of edit button in \(arg):\n\(editButton.frame)")
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    /*required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         //вызов printButtonFrame(..) будет ошибкой, т.к. Outlet-ы еще не подключены
     }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textFieldName.delegate = self
+        textFieldAboutMe.delegate = self
         
         choiceIconBackground.layer.borderWidth = 1
         choiceIconBackground.layer.borderColor = UIColor.white.cgColor
@@ -56,11 +63,52 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         editButton.layer.cornerRadius = 13
         editButton.layer.borderWidth = 1
-
-        // Do any additional setup after loading the view.
+        
+        let center: NotificationCenter = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         printButtonFrame(#function)
     }
+    
+    @objc func keyboardDidShow(notification: Notification) {
+        let info: NSDictionary = notification.userInfo! as NSDictionary
+        let keyboardSize = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
+        let keyboardY = self.view.frame.size.height - keyboardSize.height
+        let editingTextFieldY: CGFloat! = profileStackView.frame.origin.y+self.viewForTextFields.frame.origin.y+self.activeTextField.frame.origin.y
 
+        if view.frame.origin.y >= 0 {
+            if editingTextFieldY > keyboardY-50 {
+            UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                self.view.frame = CGRect(x: 0, y: self.view.frame.origin.y - (editingTextFieldY! - (keyboardY-50)),width: self.view.bounds.width, height: self.view.bounds.height)
+                }, completion: nil)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+          self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        }, completion: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeTextField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(profileStackView.frame.origin.y)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
